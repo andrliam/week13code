@@ -1,7 +1,6 @@
 package pet.store.entity;
 
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,8 +21,7 @@ public class Employee {
 	
 	private String employeeLastName;
 	
-	@Column(unique = true)
-	private int employeePhone;
+	private String employeePhone;
 	
 	private String employeeJobTitle;
 	

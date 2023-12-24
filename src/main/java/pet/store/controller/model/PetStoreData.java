@@ -32,37 +32,20 @@ public class PetStoreData {
 	private Set<PetStoreEmployee> employees = new HashSet<>();
 	
 	public PetStoreData(PetStore p){
-		this.petStoreId = p.getPetStoreId();
-		this.petStoreName = p.getPetStoreName();
-		this.petStoreAddress = p.getPetStoreAddress();
-		this.petStoreCity = p.getPetStoreCity();
-		this.petStoreState = p.getPetStoreState();
-		this.petStoreZip = p.getPetStoreZip();
-		this.petStorePhone = p.getPetStorePhone();
+		petStoreId = p.getPetStoreId();
+		petStoreName = p.getPetStoreName();
+		petStoreAddress = p.getPetStoreAddress();
+		petStoreCity = p.getPetStoreCity();
+		petStoreState = p.getPetStoreState();
+		petStoreZip = p.getPetStoreZip();
+		petStorePhone = p.getPetStorePhone();
 		
 		for(Customer c : p.getCustomers()) {
-			
-			PetStoreCustomer psc = new PetStoreCustomer();
-			
-			psc.setCustomerId(c.getCustomerId());
-			psc.setCustomerFirstName(c.getCustomerFirstName());
-			psc.setCustomerLastName(c.getCustomerLastName());
-			psc.setCustomerEmail(c.getCustomerEmail());
-			
-			this.customers.add(psc);
+			customers.add(new PetStoreCustomer(c));
 		}
 		
 		for(Employee e : p.getEmployees()) {
-			
-			PetStoreEmployee pse = new PetStoreEmployee();
-			
-			pse.setEmployeeId(e.getEmployeeId());
-			pse.setEmployeeName(e.getEmployeeName());
-			pse.setEmployeeLastName(e.getEmployeeLastName());
-			pse.setEmployeePhone(e.getEmployeePhone());
-			pse.setEmployeeJobTitle(e.getEmployeeJobTitle());
-			
-			this.employees.add(pse);
+			employees.add(new PetStoreEmployee(e));
 		}
 		
 		

@@ -17,10 +17,10 @@ public class PetStoreCustomer {
 	private String customerEmail;
 	
 	public PetStoreCustomer(Customer cust) {
-		this.customerId = cust.getCustomerId();
-		this.customerFirstName = cust.getCustomerFirstName();
-		this.customerLastName = cust.getCustomerLastName();
-		this.customerEmail = cust.getCustomerEmail();
+		customerId = cust.getCustomerId();
+		customerFirstName = cust.getCustomerFirstName();
+		customerLastName = cust.getCustomerLastName();
+		customerEmail = cust.getCustomerEmail();
 	}
 	
 }
